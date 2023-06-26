@@ -1,0 +1,167 @@
+*{
+    padding: 0;
+    margin: 0;   
+    box-sizing: border-box;
+}
+* ul{
+    margin-bottom: 0;
+}
+body{
+    background-color: #F7F8F9;
+    font-family: PT Root UI;
+    font-size: 14px;
+    font-weight: 400;
+}
+/* header sections style start  */
+header{
+        padding: 8px 0;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header nav{
+    flex: 0 0 46.6%;
+}
+.header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.header nav ul li{
+    margin-left: 15px;
+    list-style: none;
+}
+.header nav ul li a{
+    transition: all .3s ease;
+    padding: 5px 3px;
+    position: relative;
+    color: #15191C;
+    text-decoration: none;
+    display: inline-block;
+    font-family: PT Root UI;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+}
+.header nav ul li a:hover{
+    font-weight: 500;
+    background-color:#EEEE36;
+    border-radius: 5px;
+}
+.header nav ul li.address{
+    margin-right: 15px;
+}
+.header nav ul li.address a{
+    display: flex;
+    align-items: center;
+}
+.header nav ul li.address a:hover{
+    font-weight: 500;
+}
+.header nav ul li.address a span{
+    font-size: 20px;
+    color: rgba(#4d4d4d, .4);
+    margin-right: 5px;
+}
+.header nav ul li.miniMenu a{
+    display: flex;
+    align-items: center;
+}
+.header .socialNetworks{
+    flex: 0 0 19%;
+    margin-left: 31px;
+}
+.header .socialNetworks ul{
+    display: flex;
+    align-items: center;
+}
+.header .socialNetworks ul li{
+    list-style: none;
+    margin-left: 5px;
+}
+.header .socialNetworks ul li a{
+    font-size: 20px;
+}
+.header .socialNetworks ul li:last-child a{
+    padding: 5px 3px;
+    border-radius: 5px;
+    display: inline;
+    text-decoration: none;
+    color: #15191C;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+}
+.header .socialNetworks ul li:last-child a span{
+    margin-right: 10px;
+    color: #9A9C9E;
+}
+.header .socialNetworks ul li:last-child a:hover{
+    background-color:#EEEE36;
+}
+.header .email{
+    flex: 0 0 15%;
+}
+.header .email a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #15191C;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    padding: 5px 3px;
+    border-radius: 5px;
+}
+.header .email a span{
+    margin-right: 10px;
+    color: #9A9C9E;
+}
+.header .email a:hover{
+    font-weight: 700;
+    background-color:#EEEE36;
+}
+.header .loginRegistration{
+    flex: 0 0 13%;
+}
+.header .loginRegistration ul{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.header .loginRegistration ul li{
+    list-style: none;
+}
+.header .loginRegistration ul li a span{
+    margin-right: 5px;
+    color: #747883;
+}
+.header .loginRegistration ul span:last-child{
+    color: #15191C;
+    font-size: 14px;
+    font-weight: 5;
+}
+.header .loginRegistration ul li a{
+    display: flex;
+    align-items:center;
+    text-decoration: none;
+    font-family: PT Root UI;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+    padding: 5px 3px;
+    border-radius: 5px;
+    color:#15191C;
+}
+.header .loginRegistration ul li a:hover{
+    background-color:#EEEE36;
+    font-weight: 600;
+}
+
+/* header sections style start  */
