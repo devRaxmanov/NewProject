@@ -211,5 +211,58 @@ body{
     background-color:#EEEE36;
     font-weight: 600;
 }
+/* header top style end  */
+
+/* header middle style start  */
+.headerMiddle{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+}
+.headerMiddle .logo{
+    flex: 0 0 13%;
+}
+.headerMiddle .search{
+    width: 100%;
+    flex: 0 0 62.5%;
+}
+.headerMiddle .subscriptionsBasket{
+    flex: 0 0 19.3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.headerMiddle .search form{
+    position: relative;
+}
+.headerMiddle .search form input{
+    outline: none;
+    width: 100%;
+    padding: 12px 15px 12px 160px;
+    border-radius: 5px;
+    border: 1px solid #D7D9DC;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #3697E2;
+}
+.headerMiddle .search form span{
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #747883;
+}
+.headerMiddle .search form button{
+    position: absolute;
+    top: 4px;
+    right: 0;
+}
+.headerMiddle .subscriptionsBasket{
+    
+}
+/* header middle style end  */
 
 /* header sections style start  */
