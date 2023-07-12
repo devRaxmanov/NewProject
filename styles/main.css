@@ -260,9 +260,20 @@ body{
     top: 4px;
     right: 0;
 }
-.headerMiddle .subscriptionsBasket{
-    
+.headerMiddle .subscriptionsBasket .item{
+    flex: 0 0 15%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    position: relative;
 }
+.headerMiddle .subscriptionsBasket .item .itemIndex{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
 /* header middle style end  */
 
 /* header sections style start  */
