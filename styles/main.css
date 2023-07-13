@@ -3,8 +3,9 @@
     margin: 0;   
     box-sizing: border-box;
 }
-* ul{
+* ol, * ul{
     margin-bottom: 0;
+    padding: 0;
 }
 body{
     background-color: #F7F8F9;
@@ -26,6 +27,7 @@ body{
     flex: 0 0 46.6%;
 }
 .headerTop nav .fullMenu{
+    z-index: 999;
     transition: all .5s ease;
     display: none;
     padding: 10px 20px;
@@ -34,7 +36,7 @@ body{
     position: absolute;
     top: 45px;
     right: -8%;
-    background: rgba(238, 238, 54, .6);
+    background: rgba(238, 238, 54, .9);
     border-radius: 6px;
 }
 .headerTop nav .fullMenu li a{
@@ -65,6 +67,9 @@ body{
     padding: 8px 0;
     margin-left: 15px;
     list-style: none;
+}
+.headerTop nav ul li.address{
+    margin-left: 0;
 }
 .headerTop nav .mainList .miniMenu{
     position: relative;
@@ -215,6 +220,7 @@ body{
 
 /* header middle style start  */
 .headerMiddle{
+    padding: 21px 0;
     display: flex;
     align-items: center; 
     justify-content: space-between;
@@ -269,11 +275,128 @@ body{
 }
 .headerMiddle .subscriptionsBasket .item .itemIndex{
     position: absolute;
-    top: 0;
+    top: -4px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D7D9DC;  /*active index > 0 = background-color: #EEEE36; */
+    border-radius: 50%;
+    color: #fff;
+}
+.headerMiddle .subscriptionsBasket .item a{
+    transition: all .3s ease;
+    display: inline-block;
+    text-decoration: none;
+    color: #747883;
+    font-size: 24px;
+}
+.headerMiddle .subscriptionsBasket .item a:hover{
+    color: #3697E2;
+}
+/* header middle style end  */
+
+/* headre bottom style start  */
+.headerBottom{
+    border-top: 1px solid #E0E1E3;
+}
+.headerBottom ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.headerBottom ul li{
+    padding: 13px 0;
+    list-style: none;
+}
+.headerBottom ul li a{
+    transition: all .3s ease;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    color: #15191C;
+    background-color: #F7F8F9;
+}
+.headerBottom ul  li a:hover{
+    color: #0867D6;
+}
+.headerBottom ul  li a:hover::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(8, 103, 214);
+}
+.headerBottom ul  li:last-child{
+    cursor: pointer;
+    position: relative;
+}
+.headerBottom ul  li.lastChild:hover a.hover{
+    color:#0867D6;
+}
+.headerBottom ul  li.lastChild:hover a.hover::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(8, 103, 214);
+}
+.headerBottom ul  li.lastChild .navigationIcon{
+    display: none;
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 10px);
+    background: rgb(8, 103, 214);
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    border-radius: 1px;
+    z-index: -1;
+}
+.bottomMoreMenu{
+    display: block;
+    padding: 10px 0;
+    background: rgba(8, 103, 214, .9);
+    position: absolute;
+    top: 50px;
     right: 0;
+    width: 250px;
+    border-radius: 5px;
+    text-align: start;
+}
+.bottomMoreMenu ul.second{
+    flex-direction: column;
+}
+.headerBottom ul.second li{
+    padding: 0;
+}
+.bottomMoreMenu ul.second li a{
+    color: #fff;
+    padding: 10px 20px;
+    background: none;
+    font-weight: 400;
+}
+.headerBottom ul.second li a:hover{
+    color: #000000;
+    /* text-shadow: 0 0 10px rgba(0, 0, 0, 1); */
+    background-color:#EEEE36;
+    border-radius: 5px;
+}
+.headerBottom ul.second li a:hover::after{
+    content: '';
+    width: 0;
 }
 
-
-/* header middle style end  */
+/* header bottom style end  */
 
 /* header sections style start  */

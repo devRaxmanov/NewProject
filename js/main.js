@@ -3,7 +3,9 @@ window.addEventListener("DOMContentLoaded", ()=> {
     const miniMenu = document.querySelector('.headerTop nav ul.mainList li:last-child'),
         miniMenuLink = document.querySelector('.headerTop nav ul.mainList li:last-child a'),
         openMenu = document.querySelector('.headerTop nav .fullMenu'),
-        navigationIcon = document.querySelector('.headerTop nav ul li a .navigationIcon')
+        navigationIcon = document.querySelector('.headerTop nav ul li a .navigationIcon'),
+        itemIndex = document.querySelectorAll('.headerMiddle .itemIndex')
+
         miniMenu.addEventListener('mouseenter', ()=>{
             miniMenuLink.style.background = "#EEEE36"
             miniMenuLink.style.borderRadius = "5px"
@@ -26,4 +28,16 @@ window.addEventListener("DOMContentLoaded", ()=> {
             navigationIcon.style.display = "none"
             miniMenuLink.style.background = "none"
         })
+
+
+        itemIndex.forEach((item)=>{
+            if(item.textContent > 0){
+                item.style = `
+                    background-color: #EEEE36;
+                    color: #3A3F43;
+                `
+            }
+        })
+
+
 })
