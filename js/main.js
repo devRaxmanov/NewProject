@@ -39,5 +39,10 @@ window.addEventListener("DOMContentLoaded", ()=> {
             }
         })
 
+        const headerBottomHoverMenu = document.querySelector('.bottomMoreMenu'),
+              headerBottomOpenBtn = document.querySelector('.headerBottom ul  li.lastChild')
+              
+
+
 
 })
