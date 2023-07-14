@@ -40,8 +40,27 @@ window.addEventListener("DOMContentLoaded", ()=> {
         })
 
         const headerBottomHoverMenu = document.querySelector('.bottomMoreMenu'),
-              headerBottomOpenBtn = document.querySelector('.headerBottom ul  li.lastChild')
-              
+              headerBottomOpenBtn = document.querySelector('.headerBottom ul  li.lastChild'),
+              navigationIconSecond = document.querySelector('.headerBottom ul  li.lastChild .navigationIcon'),
+              secondUlLinks = document.querySelectorAll('.bottomMoreMenu ul.second li .linkItem')
+
+        headerBottomOpenBtn.addEventListener("mouseenter",()=>{
+            headerBottomHoverMenu.style.display = 'block'
+            navigationIconSecond.style.display = 'block'
+        })
+        headerBottomOpenBtn.addEventListener("mouseleave",()=>{
+            headerBottomHoverMenu.style.display = 'none'
+            navigationIconSecond.style.display = 'none'
+        })
+
+        secondUlLinks.forEach((item)=>{
+            console.log(item);
+            if (item.textContent.length > 15) {
+                item.textContent == item.textContent.slice(0, 15)
+            }
+        })
+        // let arrItem = ['work','portfolio','newJob','good job','more money','life is very beautiful']
+        // console.log(arrItem.slice(1, 5));
 
 
 

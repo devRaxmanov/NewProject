@@ -364,13 +364,13 @@ body{
     z-index: -1;
 }
 .bottomMoreMenu{
-    display: block;
-    padding: 10px 0;
+    display: none;
+    padding: 10px;
     background: rgba(8, 103, 214, .9);
     position: absolute;
     top: 50px;
     right: 0;
-    width: 250px;
+    width: 280px;
     border-radius: 5px;
     text-align: start;
 }
@@ -385,6 +385,7 @@ body{
     padding: 10px 20px;
     background: none;
     font-weight: 400;
+    text-transform: capitalize;
 }
 .headerBottom ul.second li a:hover{
     color: #000000;
