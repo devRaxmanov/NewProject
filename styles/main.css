@@ -219,6 +219,9 @@ body{
 /* header top style end  */
 
 /* header middle style start  */
+.middle{
+    background-color: #fff;     
+}
 .headerMiddle{
     padding: 21px 0;
     display: flex;
@@ -300,6 +303,7 @@ body{
 
 /* headre bottom style start  */
 .headerBottom{
+    background: #fff;
     border-top: 1px solid #E0E1E3;
 }
 .headerBottom ul{
@@ -321,7 +325,8 @@ body{
     line-height: 24px;
     letter-spacing: 0em;
     color: #15191C;
-    background-color: #F7F8F9;
+    background-color: #ffffff;
+    z-index: 99;
 }
 .headerBottom ul  li a:hover{
     color: #0867D6;
@@ -354,14 +359,14 @@ body{
 .headerBottom ul  li.lastChild .navigationIcon{
     display: none;
     position: absolute;
-    bottom: -10px;
+    bottom: 5px;
     left: calc(50% - 10px);
     background: rgb(8, 103, 214);
     width: 20px;
     height: 20px;
     transform: rotate(45deg);
     border-radius: 1px;
-    z-index: -1;
+    z-index: 1;
 }
 .bottomMoreMenu{
     display: none;
