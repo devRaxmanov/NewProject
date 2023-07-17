@@ -1,5 +1,36 @@
 "use strict"
 window.addEventListener("DOMContentLoaded", ()=> {
+    //   for swipper silde js start 
+    const swiper = new Swiper('.banner .swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+    
+        // If we need pagination
+        pagination: {
+        el: '.swiper-pagination',
+        },
+    
+        // Navigation arrows
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+    
+        // And if we need scrollbar
+        scrollbar: {
+        el: '.swiper-scrollbar',
+        },
+    });
+    // for swipper slide js end 
+
+
+
+
+
+
+
+
     const miniMenu = document.querySelector('.headerTop nav ul.mainList li:last-child'),
         miniMenuLink = document.querySelector('.headerTop nav ul.mainList li:last-child a'),
         openMenu = document.querySelector('.headerTop nav .fullMenu'),
@@ -53,14 +84,7 @@ window.addEventListener("DOMContentLoaded", ()=> {
             navigationIconSecond.style.display = 'none'
         })
 
-        secondUlLinks.forEach((item)=>{
-            console.log(item);
-            if (item.textContent.length > 15) {
-                item.textContent == item.textContent.slice(0, 15)
-            }
-        })
-        // let arrItem = ['work','portfolio','newJob','good job','more money','life is very beautiful']
-        // console.log(arrItem.slice(1, 5));
+    
 
 
 

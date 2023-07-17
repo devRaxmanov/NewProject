@@ -13,6 +13,10 @@ body{
     font-size: 14px;
     font-weight: 400;
 }
+.swiper {
+    width: 100%;
+  }
+
 /* header sections style start  */
 .headerTop{
     display: flex;
@@ -406,3 +410,26 @@ body{
 /* header bottom style end  */
 
 /* header sections style start  */
+
+/* banner section style start  */
+.banner{
+    padding: 30px 0;
+}
+.banner .mainBanner{
+    overflow: hidden;
+    border-radius: 30px;
+}
+.banner .mainBanner img{
+    width: 100%;
+    object-fit: cover;
+}
+.banner .mainBanner .slideItem{
+    position: relative;
+}
+.banner .mainBanner .slideItem .slideBtn{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/* banner section style end  */
