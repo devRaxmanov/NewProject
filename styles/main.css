@@ -431,5 +431,30 @@ body{
     left: 0;
     bottom: 0;
 }
-
+.banner .paginationSlider{
+    background: rgba(255, 255, 255, .4);
+    width: auto;
+    height: 30px;
+    position: absolute;
+    left: calc(50% - 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 5px;
+    bottom: 10px;
+}
+.banner .swiper-pagination-bullet{
+    width: 8px;
+    height: 8px;
+    background-color: #D7D9DC;
+    margin-right: 15px;
+}
+.banner .swiper-pagination-bullet:last-child{
+    margin-right: 0;
+}
+.banner .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    width: 10px;
+    height: 10px;
+}
 /* banner section style end  */
