@@ -1,35 +1,5 @@
 "use strict"
 window.addEventListener("DOMContentLoaded", ()=> {
-    //   for swipper silde js start 
-    const swiper = new Swiper('.banner .swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-    
-        // If we need pagination
-        pagination: {
-        el: '.swiper-pagination',
-        },
-    
-        // Navigation arrows
-        navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-        },
-    
-        // And if we need scrollbar
-        scrollbar: {
-        el: '.swiper-scrollbar',
-        },
-    });
-    // for swipper slide js end 
-
-
-
-
-
-
-
 
     const miniMenu = document.querySelector('.headerTop nav ul.mainList li:last-child'),
         miniMenuLink = document.querySelector('.headerTop nav ul.mainList li:last-child a'),
@@ -60,7 +30,6 @@ window.addEventListener("DOMContentLoaded", ()=> {
             miniMenuLink.style.background = "none"
         })
 
-
         itemIndex.forEach((item)=>{
             if(item.textContent > 0){
                 item.style = `
@@ -84,8 +53,67 @@ window.addEventListener("DOMContentLoaded", ()=> {
             navigationIconSecond.style.display = 'none'
         })
 
-    
+        // This js for banner slider btn link start
+        const bannerBtn = document.querySelectorAll('.banner .slideItem a'),
+              animationIcon = document.querySelectorAll('.banner .slideItem a .animationIcon')
+        
+        bannerBtn.forEach((item)=>{
+            item.addEventListener('mouseenter', ()=>{
+                animationIcon.forEach((item)=>{
+                    item.classList.add('active')
+                })
+            })
+            item.addEventListener('mouseleave', ()=>{
+                animationIcon.forEach((item)=>{
+                    item.classList.remove('active')
+                })
+            })
+        })
 
+        // This js for banner slider btn link end
 
+        //   for swipper silde js start 
+        new Swiper('.banner .swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+            el: '.swiper-pagination',
+            },
+            // Navigation arrows
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+            el: '.swiper-scrollbar',
+            },
+        });
+
+        new Swiper('.secondBanner .swiper.second', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+            el: '.swiper-pagination',
+            },
+            // Navigation arrows
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+            el: '.swiper-scrollbar',
+            },
+        });
+        // for swipper slide js end 
 
 })

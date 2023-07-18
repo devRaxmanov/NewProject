@@ -13,9 +13,6 @@ body{
     font-size: 14px;
     font-weight: 400;
 }
-.swiper {
-    width: 100%;
-  }
 
 /* header sections style start  */
 .headerTop{
@@ -409,15 +406,20 @@ body{
 
 /* header bottom style end  */
 
-/* header sections style start  */
+/* header sections style end  */
 
+/*  -----------------------------------------           ------------------ ---------------               -------------------------------      -----------------------------------------           ------------------ ---------------               -------------------------------      -----------------------------------------           ------------------ ---------------               -------------------------------      -----------------------------------------           ------------------ ---------------               -------------------------------      -----------------------------------------           ------------------ ---------------               -------------------------------      -----------------------------------------           ------------------ ---------------               -------------------------------    */
 /* banner section style start  */
+
+.banner .swiper {
+    width: 100%;
+}
 .banner{
     padding: 30px 0;
 }
 .banner .mainBanner{
     overflow: hidden;
-    border-radius: 30px;
+    border-radius: 10px;
 }
 .banner .mainBanner img{
     width: 100%;
@@ -428,8 +430,39 @@ body{
 }
 .banner .mainBanner .slideItem .slideBtn{
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 50px;
+    bottom: 46px;
+}
+.banner .mainBanner .slideBtn a{
+    width: 186px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(238, 238, 54);
+    color: #15191C;
+    text-decoration: none;
+    border-radius: 3px;
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.banner .slideItem .animationIcon{
+    margin-left: 10px;
+}
+.banner .slideItem .animationIcon.active{
+    position: relative;
+    animation-name: shake;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+}
+@keyframes shake{
+    0%{
+        left: 12px;
+    }
+    100%{
+        left: 0;
+    }
 }
 .banner .paginationSlider{
     background: rgba(255, 255, 255, .4);
@@ -456,5 +489,82 @@ body{
 .banner .swiper-pagination-bullet.swiper-pagination-bullet-active{
     width: 10px;
     height: 10px;
+}
+.swiper-button-next{
+    color: rgba(255, 255, 255, 1);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, .6);
+    border-radius: 50%;
+    right: -18px;
+}
+.swiper-button-next::after{
+    content: '';
+}
+.swiper-button-next .iconRight{
+    position: relative;
+    width: 10px;
+    color:#535E69;
+    left: -7px;
+}
+.swiper-button-prev .iconLeft{
+    position: relative;
+    width: 10px;
+    color:#535E69;
+    left: 7px;
+}
+.swiper-button-prev{
+    color: rgba(255, 255, 255, 1);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, .6);
+    border-radius: 50%;
+    left: -18px;
+}
+.swiper-button-prev::after{
+    content: '';
+}
+.swiper-button-prev::before, .swiper-button-next::before{
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: 84px;
+    height: 84px;
+    background:rgba(255, 255, 255, .2);
+    border-radius: 50%;
+    animation-name: shape;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+}
+@keyframes shape{
+    0%{
+        width: 60px;
+        height: 60px;
+        top: 0px;
+        left: 0px;
+        opacity: 1;
+    }
+    100%{
+        top: -12px;
+        left: -12px;
+        width: 84px;
+        height: 84px;
+        opacity: .300;
+    }
+}
+
+/* second banner start  */
+.banner .secondBanner{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.banner .secondBanner .swiper{
+    width: 100%;
+}
+.banner .secondBanner .slideItem img{
+    width: 100%;
+    object-fit: cover;
 }
 /* banner section style end  */
