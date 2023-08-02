@@ -379,6 +379,7 @@ body{
     width: 280px;
     border-radius: 5px;
     text-align: start;
+    z-index: 999;
 }
 .bottomMoreMenu ul.second{
     flex-direction: column;
@@ -571,19 +572,6 @@ body{
     display: flex;
     position: relative;
 }
-.secondBanner .itemNavigation{
-    width: 9px;
-    height: 9px;
-    background-color: rgba(255, 255, 255, .6);
-    border-radius: 50%;
-    margin-right: 5px;
-}
-.secondBanner .itemNavigation:last-child{
-    margin-right: 0;
-}
-.secondBanner .itemNavigation.active{
-    background-color: rgba(255, 255, 255, 1);
-}
 .secondBanner .paginationSlider{
     position: absolute;
     padding: 5px 10px;
@@ -602,7 +590,7 @@ body{
 }
 .secondBanner .paginationSlider .active{
     position: absolute;
-    top: 9px;
+    top: 10px;
     transform: translateX(-20px);
     width: 10px;
     height: 10px;
