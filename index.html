@@ -137,7 +137,7 @@
                     <div class="col-md-9">
                         <div class="mainBanner">
                             <!-- Slider main container -->
-                            <div class="swiper">
+                            <div class="swiper swiperHero">
                                 <!-- Additional required wrapper -->
                                 <div class="swiper-wrapper">
                                 <!-- Slides -->
@@ -173,9 +173,9 @@
                     </div>
                     <div class="col-md-3">
                         <div class="secondBanner">
-                            <div class="swiper second">
+                            <div class="mySlider">
                                 <!-- Additional required wrapper -->
-                                <div class="swiper-wrapper">
+                                <div class="sliderWrapper">
                                     <!-- Slides -->
                                     <div class="swiper-slide slideItem">
                                         <div class="slideImg"><img src="images/secondSliderImg.jpg" alt="bannerImg"></div>
@@ -188,11 +188,16 @@
                                     </div>
                                 </div>
                                 <!-- If we need pagination -->
-                                <div class="swiper-pagination paginationSlider"></div>
+                                <div class="paginationSlider">
+                                    <div class="circle" id="circle01"></div>
+                                    <div class="circle" id="circle02"></div>
+                                    <div class="circle" id="circle03"></div>
+                                    <div class="active" id="active"></div>
+                                </div>
                             
                                 <!-- If we need navigation buttons -->
-                                <div class="swiper-button-prev"><span class="iconLeft"><i class="fa-solid fa-chevron-left"></i></span></div>
-                                <div class="swiper-button-next"><span class="iconRight"><i class="fa-solid fa-angle-right"></i></span></div>
+                                <div class="swiper-button-prev prevBtn"><span class="iconLeft"><i class="fa-solid fa-chevron-left"></i></span></div>
+                                <div class="swiper-button-next nextBtn"><span class="iconRight"><i class="fa-solid fa-angle-right"></i></span></div>
                             </div>
                         </div>
                     </div>
@@ -200,6 +205,8 @@
             </div>
         </section>
         <!-- banner section start -->
+
+
 
 
 

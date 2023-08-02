@@ -72,8 +72,33 @@ window.addEventListener("DOMContentLoaded", ()=> {
 
         // This js for banner slider btn link end
 
+        let sliderWrapper = document.querySelector('.sliderWrapper'),
+            sliderItem = document.querySelectorAll('.sliderWrapper .swiper-slide'),
+            active = document.querySelector('#active'),
+            circle01 = document.querySelector('#circle01'),
+            circle02 = document.querySelector('#circle02'),
+            circle03 = document.querySelector('#circle03'),
+            prevBtn = document.querySelector('.secondBanner .prevBtn'),
+            nextBtn = document.querySelector('.secondBanner .nextBtn')
+        
+            circle01.addEventListener('click', ()=>{
+                sliderWrapper.style.transform = "translateX(0)"
+                active.style.transform = "translateX(-20px)"
+            })
+            circle02.addEventListener('click', ()=>{
+                sliderWrapper.style.transform = "translateX(-306px)"
+                active.style.transform = "translateX(0px)"
+            })
+            circle03.addEventListener('click', ()=>{
+                sliderWrapper.style.transform = "translateX(-612px)"
+                active.style.transform = "translateX(20px)"
+            })
+        
+        
+
         //   for swipper silde js start 
-        new Swiper('.banner .swiper', {
+
+        new Swiper('.swiper', {
             // Optional parameters
             direction: 'horizontal',
             loop: true,
@@ -93,27 +118,11 @@ window.addEventListener("DOMContentLoaded", ()=> {
             el: '.swiper-scrollbar',
             },
         });
+        
 
-        new Swiper('.secondBanner .swiper.second', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-
-            // If we need pagination
-            pagination: {
-            el: '.swiper-pagination',
-            },
-            // Navigation arrows
-            navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-            },
-
-            // And if we need scrollbar
-            scrollbar: {
-            el: '.swiper-scrollbar',
-            },
-        });
         // for swipper slide js end 
+
+
+        
 
 })
