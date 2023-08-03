@@ -71,6 +71,7 @@ window.addEventListener("DOMContentLoaded", ()=> {
         })
 
         // This js for banner slider btn link end
+        
 
         const mySlider = document.querySelector('.mySlider'),
             sliderWrapper = document.querySelector('.sliderWrapper'),
