@@ -562,11 +562,12 @@ body{
     position: relative;
 }
 .banner .secondBanner .slideItem img{
-    width: 100%;
+    width: 306px;
     object-fit: cover;
-    position: relative;
 }
+
 .sliderWrapper{
+    height: 444px;
     transition: all .4s ease;
     display: flex;
     position: relative;
@@ -602,7 +603,7 @@ body{
 }
 .secondBanner .paginationSlider .active{
     position: absolute;
-    top: 9px;
+    top: 10px;
     transform: translateX(-20px);
     width: 10px;
     height: 10px;

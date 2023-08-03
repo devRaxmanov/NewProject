@@ -72,15 +72,57 @@ window.addEventListener("DOMContentLoaded", ()=> {
 
         // This js for banner slider btn link end
 
-        let sliderWrapper = document.querySelector('.sliderWrapper'),
-            sliderItem = document.querySelectorAll('.sliderWrapper .swiper-slide'),
+        const mySlider = document.querySelector('.mySlider'),
+            sliderWrapper = document.querySelector('.sliderWrapper'),
+            sliderItem = document.querySelectorAll('.sliderWrapper .slideItem'),
+            width = getComputedStyle(sliderWrapper).width, // 306px
             active = document.querySelector('#active'),
             circle01 = document.querySelector('#circle01'),
             circle02 = document.querySelector('#circle02'),
             circle03 = document.querySelector('#circle03'),
             prevBtn = document.querySelector('.secondBanner .prevBtn'),
-            nextBtn = document.querySelector('.secondBanner .nextBtn')
-        
+            nextBtn = document.querySelector('.secondBanner .nextBtn');
+
+        let offset = 0;
+
+        nextBtn.addEventListener('click', ()=>{
+            
+            if (offset == (+width.slice(0, width.length - 2) * (sliderItem.length - 1))) {
+                offset = 0;
+            }else{
+                offset += +width.slice(0, width.length - 2)
+            }
+            sliderWrapper.style.transform = `translateX(-${offset}px)`
+            if (sliderWrapper.style.transform == "translateX(-612px)") {
+                active.style.transform = "translateX(20px)"
+            }else if (sliderWrapper.style.transform == "translateX(-306px)") {
+                active.style.transform = "translateX(0px)"
+            }else if (sliderWrapper.style.transform == "translateX(0)"){
+                active.style.transform = "translateX(-20px)"
+            }
+            
+        }) 
+        prevBtn.addEventListener('click', ()=>{
+            if (offset == 0) {
+                offset = (+width.slice(0, width.length - 2) * (sliderItem.length - 1))
+            }else{
+                offset -= +width.slice(0, width.length - 2)
+            }
+            sliderWrapper.style.transform = `translateX(-${offset}px)`
+
+            if (sliderWrapper.style.transform == "translateX(-612px)") {
+                active.style.transform = "translateX(20px)"
+            }else if (sliderWrapper.style.transform == "translateX(-306px)") {
+                active.style.transform = "translateX(0)"
+            }else{
+                active.style.transform = "translateX(-20px)"
+            }
+        }) 
+
+            sliderWrapper.style.width = 100 * sliderItem.length + '%';
+            sliderItem.forEach(slide =>{
+                slide.style.width = width;
+            })
             circle01.addEventListener('click', ()=>{
                 sliderWrapper.style.transform = "translateX(0)"
                 active.style.transform = "translateX(-20px)"
@@ -93,6 +135,10 @@ window.addEventListener("DOMContentLoaded", ()=> {
                 sliderWrapper.style.transform = "translateX(-612px)"
                 active.style.transform = "translateX(20px)"
             })
+
+            
+            
+            
         
         
 
