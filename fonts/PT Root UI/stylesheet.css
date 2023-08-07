@@ -1,3 +1,4 @@
+/* first font PT Root UI */
 @font-face {
     font-family: 'PT Root UI';
     src: url('PTRootUI-Medium.eot');
@@ -46,3 +47,35 @@
     font-style: normal;
 }
 
+
+/* second font Circe */
+@font-face {
+    font-family: 'Circe';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Circe'), url('CRC55.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Circe Extra Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Circe Extra Light'), url('CRC25.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Circe Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Circe Light'), url('CRC35.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Circe Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Circe Bold'), url('CRC65.woff') format('woff');
+    }
