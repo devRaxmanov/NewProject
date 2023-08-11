@@ -1,6 +1,8 @@
 "use strict"
 window.addEventListener("DOMContentLoaded", ()=> {
 
+
+    // This code is for additional menus in the Header section // START
     const miniMenu = document.querySelector('.headerTop nav ul.mainList li:last-child'),
         miniMenuLink = document.querySelector('.headerTop nav ul.mainList li:last-child a'),
         openMenu = document.querySelector('.headerTop nav .fullMenu'),
@@ -52,8 +54,9 @@ window.addEventListener("DOMContentLoaded", ()=> {
             headerBottomHoverMenu.style.display = 'none'
             navigationIconSecond.style.display = 'none'
         })
+        // This code is for additional menus in the Header section // END
 
-        // This js for banner slider btn link start
+        // This code is for Banner Slider btn link // START
         const bannerBtn = document.querySelectorAll('.banner .slideItem a'),
               animationIcon = document.querySelectorAll('.banner .slideItem a .animationIcon')
         
@@ -69,10 +72,9 @@ window.addEventListener("DOMContentLoaded", ()=> {
                 })
             })
         })
+        // This code is for Banner Slider btn link // END
 
-        // This js for banner slider btn link end
-        
-
+        // This code is for the second slider of the banner // START
         const mySlider = document.querySelector('.mySlider'),
             sliderWrapper = document.querySelector('.sliderWrapper'),
             sliderItem = document.querySelectorAll('.sliderWrapper .slideItem'),
@@ -91,60 +93,83 @@ window.addEventListener("DOMContentLoaded", ()=> {
             if (offset == (+width.slice(0, width.length - 2) * (sliderItem.length - 1))) {
                 offset = 0;
             }else{
-                offset += +width.slice(0, width.length - 2)
+                offset += +width.slice(0, width.length - 2);
             }
-            sliderWrapper.style.transform = `translateX(-${offset}px)`
+            sliderWrapper.style.transform = `translateX(-${offset}px)`;
             if (sliderWrapper.style.transform == "translateX(-612px)") {
-                active.style.transform = "translateX(20px)"
+                active.style.transform = "translateX(20px)";
             }else if (sliderWrapper.style.transform == "translateX(-306px)") {
-                active.style.transform = "translateX(0px)"
+                active.style.transform = "translateX(0px)";
             }else if (sliderWrapper.style.transform == "translateX(0)"){
-                active.style.transform = "translateX(-20px)"
+                active.style.transform = "translateX(-20px)";
             }
             
         }) 
         prevBtn.addEventListener('click', ()=>{
             if (offset == 0) {
-                offset = (+width.slice(0, width.length - 2) * (sliderItem.length - 1))
+                offset = (+width.slice(0, width.length - 2) * (sliderItem.length - 1));
             }else{
-                offset -= +width.slice(0, width.length - 2)
+                offset -= +width.slice(0, width.length - 2);
             }
-            sliderWrapper.style.transform = `translateX(-${offset}px)`
+            sliderWrapper.style.transform = `translateX(-${offset}px)`;
 
             if (sliderWrapper.style.transform == "translateX(-612px)") {
-                active.style.transform = "translateX(20px)"
+                active.style.transform = "translateX(20px)";
             }else if (sliderWrapper.style.transform == "translateX(-306px)") {
-                active.style.transform = "translateX(0)"
+                active.style.transform = "translateX(0)";
             }else{
-                active.style.transform = "translateX(-20px)"
+                active.style.transform = "translateX(-20px)";
             }
         }) 
 
             sliderWrapper.style.width = 100 * sliderItem.length + '%';
             sliderItem.forEach(slide =>{
-                slide.style.width = width;
+                slide.style.width = width;;
             })
             circle01.addEventListener('click', ()=>{
-                sliderWrapper.style.transform = "translateX(0)"
-                active.style.transform = "translateX(-20px)"
+                sliderWrapper.style.transform = "translateX(0)";
+                active.style.transform = "translateX(-20px)";
             })
             circle02.addEventListener('click', ()=>{
-                sliderWrapper.style.transform = "translateX(-306px)"
-                active.style.transform = "translateX(0px)"
+                sliderWrapper.style.transform = "translateX(-306px)";
+                active.style.transform = "translateX(0px)";
             })
             circle03.addEventListener('click', ()=>{
-                sliderWrapper.style.transform = "translateX(-612px)"
-                active.style.transform = "translateX(20px)"
+                sliderWrapper.style.transform = "translateX(-612px)";
+                active.style.transform = "translateX(20px)";
             })
-
+        // This code is for the second slider of the banner // END
             
-            
-            
-        
-        
+        // bestsellers products section js start 
+        const productImg = document.querySelectorAll('.bestsellers .imgSlider .image'),
+              line01 = document.querySelector('.bestsellers .imgNavigation .line01'),
+              line02 = document.querySelector('.bestsellers .imgNavigation .line02'),
+              line03 = document.querySelector('.bestsellers .imgNavigation .line03'),
+              line04 = document.querySelector('.bestsellers .imgNavigation .line04'),
+              lineActive = document.querySelector('.bestsellers .imgNavigation .active')
 
-        //   for swipper silde js start 
+              line01.addEventListener('click', ()=>{
+                lineActive.style.left = "10px"
+              })
+              line02.addEventListener('click', ()=>{
+                lineActive.style.left = "71px"
+              })
+              line03.addEventListener('click', ()=>{
+                lineActive.style.left = "132px"
+              })
+              line04.addEventListener('click', ()=>{
+                lineActive.style.left = "193px"
+              })
 
+        productImg.forEach(item =>{
+            let widthItem = getComputedStyle(item).width;
+            console.log(widthItem);
+        })
+
+
+        // bestsellers products section js start 
+
+        //   This code is for swipper silde js // START 
         new Swiper('.swiper', {
             // Optional parameters
             direction: 'horizontal',
@@ -165,9 +190,9 @@ window.addEventListener("DOMContentLoaded", ()=> {
             el: '.swiper-scrollbar',
             },
         });
-        
+        //   This code is for swipper silde js // END 
 
-        // for swipper slide js end 
+        
 
 
         
