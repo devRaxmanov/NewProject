@@ -14,7 +14,9 @@ body{
     font-size: 14px;
     font-weight: 400;
 }
-
+.wrapper{
+    overflow: hidden;
+}
 /* header sections style start  */
 .headerTop{
     display: flex;
@@ -732,7 +734,7 @@ body{
 .bestsellers .imgSlider{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     overflow: hidden;
 }
 .bestsellers .imgSlider .image{
@@ -839,6 +841,14 @@ body{
     justify-content: space-between;
     width: 100%;
 }
+.bestsellers .cardImg .imgNavigation li{
+    padding: 5px 0;
+    list-style: none;
+    cursor: pointer;
+}
+.bestsellers .cardImg .imgNavigation li:last-child{
+    padding: 0;
+}
 .bestsellers .cardImg .imgNavigation .line{
     background: #D7D9DC;
     height: 3px;
@@ -848,10 +858,10 @@ body{
 .bestsellers .cardImg .imgNavigation .active{
     transition: all .3s ease;
     position: absolute;
-    top: 0;
+    top: 5px;
     left: 10px;
     background: #9A9C9E;
     height: 3px;
-    width: 56px;
+    width: 21.2%;
 }
 /* bestsellers section style end  */

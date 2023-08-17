@@ -141,30 +141,33 @@ window.addEventListener("DOMContentLoaded", ()=> {
         // This code is for the second slider of the banner // END
             
         // bestsellers products section js start 
-        const productImg = document.querySelectorAll('.bestsellers .imgSlider .image'),
+        const productImgPerent = document.querySelector('.bestsellers .imgSlider'),
+              productImg = document.querySelector('.bestsellers .imgSlider #image01'),
               line01 = document.querySelector('.bestsellers .imgNavigation .line01'),
               line02 = document.querySelector('.bestsellers .imgNavigation .line02'),
               line03 = document.querySelector('.bestsellers .imgNavigation .line03'),
               line04 = document.querySelector('.bestsellers .imgNavigation .line04'),
-              lineActive = document.querySelector('.bestsellers .imgNavigation .active')
+              lineActive = document.querySelector('.bestsellers .imgNavigation .active'),
+              widthImg = getComputedStyle(productImg).width;
+            //   productImgPerent.style.width = "1px";
 
+              console.log(widthImg);
               line01.addEventListener('click', ()=>{
+                productImgPerent.style.transform = "translateX(0)"
                 lineActive.style.left = "10px"
               })
               line02.addEventListener('click', ()=>{
-                lineActive.style.left = "71px"
+                lineActive.style.left = "calc(25% + 7px)"
+                productImgPerent.style.transform = ""
               })
               line03.addEventListener('click', ()=>{
-                lineActive.style.left = "132px"
+                lineActive.style.left = "calc(50% + 4px)"
               })
               line04.addEventListener('click', ()=>{
-                lineActive.style.left = "193px"
+                lineActive.style.left = "75.5%"
               })
 
-        productImg.forEach(item =>{
-            let widthItem = getComputedStyle(item).width;
-            console.log(widthItem);
-        })
+        
 
 
         // bestsellers products section js start 
